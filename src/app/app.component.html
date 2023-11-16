@@ -1,3 +1,28 @@
+<div class="settings" (click)="togglesettings()">
+  <i class="bi bi-gear"></i>
+</div>
+<div class="settingsContainer" *ngIf="isSettingsContainer">
+  <div class="settingsBackground" (click)="isSettingsContainer = false"></div>
+  <div class="settingContent">
+    <h1>Settings</h1>
+    <div class="container">
+      <label class="toggle" for="switch">
+          <input id="switch" class="input" type="checkbox">
+          <div class="icon icon--moon">
+              <svg height="32" width="32" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" fill-rule="evenodd"></path>
+              </svg>
+          </div>
+      
+          <div class="icon icon--sun">
+              <svg height="32" width="32" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path>
+              </svg>
+          </div>
+      </label>
+  </div>
+  </div>
+</div>
 <div id="date_page_background"></div>
 <div id="date_page" (scroll)="onScroll($event)">
   <div class="dateTextContainer">
@@ -27,13 +52,10 @@
 <div id="detail_page">
   <h2>Thiru Jeyakumar</h2>
   <h2>and Nirmaladevi's</h2>
-  <h1 style="margin-top: 2.5vh;">House Warming</h1>
+  <h1 style="margin-top: 4vh;">House Warming</h1>
   <h1>Ceremony</h1>
-  <div class="photoFrame">
-    <img src="" alt="Clint Photo">
-  </div>
-  <span style="margin-top: 5vh; font-family: 'Rochester', cursive !important;"> at 07:00 am</span>
-  <p style="margin-top: 1vh;">Venue</p>
+  <span style="margin-top: 10vh; font-family: 'Rochester', cursive !important;"> at 07:00 am</span>
+  <p style="margin-top: 2.5vh;">Venue</p>
   <span style="font-family: 'Rochester', cursive !important;">Sungurampatti, ( air port road ) Thirumangalam,
     Madurai-625706</span>
   <div class="locationButton" (click)="navigateToLocation()">
@@ -41,5 +63,18 @@
   </div>
 </div>
 <div class="footer">
-  
+  <h4>Vasanth E-Invitations</h4>
+  <div style="display: flex;align-items: center; margin-top: 2vh;">
+    <i class="bi bi-geo-alt" style="margin-right: 1vh;"></i>
+    <h2>Thirumangalm, Madurai</h2>
+  </div>
+  <div style="display: flex;align-items: center; margin-top: 2vh;" (click)="openDialer()">
+    <i class="bi bi-telephone" style="margin-right: 1vh;"></i>
+    <h2>9360733323</h2>
+  </div>
+  <div class="socialMediaContainer">
+
+    <i class="bi bi-instagram" (click)="openInstagram()"></i>
+    <i class="bi bi-whatsapp" (click)="openWhatsApp()"></i>
+  </div>
 </div>

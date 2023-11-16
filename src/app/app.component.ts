@@ -8,6 +8,11 @@ import * as moment from 'moment';
 })
 export class AppComponent implements OnInit {
   countdown: any;
+  isSettingsContainer: boolean = false;
+
+  togglesettings() {
+    this.isSettingsContainer = !this.isSettingsContainer;
+  }
 
   navigateToLocation() {
     // Replace these coordinates with the desired destination
@@ -19,6 +24,24 @@ export class AppComponent implements OnInit {
 
     // Open the URL in a new tab or window
     window.open(url, '_blank');
+  }
+
+  openWhatsApp() {
+    const phoneNumber = '9360733323';
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
+    window.open(whatsappUrl, '_blank');
+  }
+
+  openInstagram() {
+    const instagramUsername = '_mass.dev'; // Replace 'USERNAME' with the desired Instagram username
+    const instagramUrl = `https://www.instagram.com/${instagramUsername}/`;
+    window.open(instagramUrl, '_blank');
+  }
+
+  openDialer() {
+    const phoneNumber = '9360733323';
+    const dialerUrl = `tel:${phoneNumber}`;
+    window.open(dialerUrl);
   }
 
   ngOnInit(): void {

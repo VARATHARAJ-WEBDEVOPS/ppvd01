@@ -1,5 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rochester&display=swap');
 
+.settings {
+    position: fixed;
+    top: 20%;
+    left: 2%;
+    width: 4vh;
+    height: 4vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.6vh;
+    border-radius: 1vh;
+    z-index: 3;
+}
+
+.settingsContainer {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.settingContent {
+    width: 30vh;
+    height: 30vh;
+    background-color: #fff;
+    position: fixed;
+    top: 25%;
+    left: 2%;
+    border-radius: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.settingContent h1{
+    font-size: 2vh;
+    margin-top: 2vh;
+    font-family: Gotham;
+}
+
+.settingContent p {
+    font-size: 2vh;
+    margin-top: 5vh;
+    font-family: Gotham;
+}
+
+.settingsBackground {
+    background-color: #00000038;
+    width: 100%;
+    height: 100vh;
+}
+
 #date_page_background {
     width: 100%;
     height: 80vh;
@@ -29,6 +83,7 @@
     font-size: 4vh;
     transform: rotate(-10deg);
     margin-top: 10vh;
+    z-index: 1;
 }
 
 
@@ -46,7 +101,7 @@
 }
 
 #detail_page h2 {
-    font-size: 4vh;
+    font-size: 3vh;
     font-family: 'Rochester', cursive;
     font-weight: 200;
 }
@@ -118,7 +173,7 @@
     font-size: 2vh;
 }
 
-.timeContainers h2{
+.timeContainers h2 {
     margin-top: 2vh;
 }
 
@@ -126,4 +181,67 @@
     width: 100%;
     height: 40vh;
     background-color: rgb(110, 56, 235);
+    color: #fff;
+    font-family: Gotham;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.footer h4 {
+    font-size: 3vh;
+}
+
+.footer h2 {
+    font-size: 2vh;
+}
+
+.socialMediaContainer {
+    display: flex;
+    margin-top: 7vh;
+    font-size: 3vh;
+}
+
+.socialMediaContainer i {
+    margin-inline: 3vh;
+}
+
+.toggle {
+
+    background-color: #fff;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 50px 20px rgba(0, 0, 0, .1);
+    line-height: 1;
+  }
+  
+  .input {
+    display: none;
+  }
+  
+  .icon {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    transition: transform 500ms;
+  }
+  
+  .icon--moon {
+    transition-delay: 200ms;
+  }
+  
+  .icon--sun {
+    transform: scale(0);
+  }
+  
+  #switch:checked + .icon--moon {
+    transform: rotate(360deg) scale(0);
+  }
+  
+  #switch:checked ~ .icon--sun {
+    transition-delay: 200ms;
+    transform: scale(1) rotate(360deg);
+  }
