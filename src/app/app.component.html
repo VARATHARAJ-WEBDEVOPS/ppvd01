@@ -1,0 +1,45 @@
+<div id="date_page_background"></div>
+<div id="date_page" (scroll)="onScroll($event)">
+  <div class="dateTextContainer">
+    <p style="font-size: 5.5vh;">Save</p>
+    <p style="font-size: 4.7vh;">The Date</p>
+    <p style="font-size: 4vh;">-25-01-24-</p>
+  </div>
+  <div class="CountDownContainer">
+    <div class="timeContainers">
+      <p>DAYS</p>
+      <h2>{{ countdown.days }}</h2>
+    </div>
+    <div class="timeContainers">
+      <p>HOURS</p>
+      <h2>{{ countdown.hours }}</h2>
+    </div>
+    <div class="timeContainers">
+      <P>MINUTES</P>
+      <h2>{{ countdown.minutes }}</h2>
+    </div>
+    <div class="timeContainers">
+      <P>SECONDS</P>
+      <h2>{{ countdown.seconds }}</h2>
+    </div>
+  </div>
+</div>
+<div id="detail_page">
+  <h2>Thiru Jeyakumar</h2>
+  <h2>and Nirmaladevi's</h2>
+  <h1 style="margin-top: 2.5vh;">House Warming</h1>
+  <h1>Ceremony</h1>
+  <div class="photoFrame">
+    <img src="" alt="Clint Photo">
+  </div>
+  <span style="margin-top: 5vh; font-family: 'Rochester', cursive !important;"> at 07:00 am</span>
+  <p style="margin-top: 1vh;">Venue</p>
+  <span style="font-family: 'Rochester', cursive !important;">Sungurampatti, ( air port road ) Thirumangalam,
+    Madurai-625706</span>
+  <div class="locationButton" (click)="navigateToLocation()">
+    Location &nbsp; <i class="bi bi-geo-alt-fill"></i>
+  </div>
+</div>
+<div class="footer">
+  
+</div>
