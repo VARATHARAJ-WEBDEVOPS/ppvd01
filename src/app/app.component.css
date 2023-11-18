@@ -207,41 +207,21 @@
     margin-inline: 3vh;
 }
 
-.toggle {
+.languageContainer {
+    width: 85%;
+    height: 6vh;
+    border: 0.1vh solid #000;
+    margin-top: 8vh;
+    display: flex;
+}
 
-    background-color: #fff;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    box-shadow: 0 0 50px 20px rgba(0, 0, 0, .1);
-    line-height: 1;
-  }
-  
-  .input {
-    display: none;
-  }
-  
-  .icon {
-    grid-column: 1 / 1;
-    grid-row: 1 / 1;
-    transition: transform 500ms;
-  }
-  
-  .icon--moon {
-    transition-delay: 200ms;
-  }
-  
-  .icon--sun {
-    transform: scale(0);
-  }
-  
-  #switch:checked + .icon--moon {
-    transform: rotate(360deg) scale(0);
-  }
-  
-  #switch:checked ~ .icon--sun {
-    transition-delay: 200ms;
-    transform: scale(1) rotate(360deg);
-  }
+.tamil, .english {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+    font-family: Gotham;
+    user-select: none;
+}

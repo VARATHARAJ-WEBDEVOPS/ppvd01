@@ -8,7 +8,16 @@ import * as moment from 'moment';
 })
 export class AppComponent implements OnInit {
   countdown: any;
-  isSettingsContainer: boolean = false;
+  isSettingsContainer: boolean = true;
+  isTamil: boolean = false;
+
+  toggleTamil() {
+    this.isTamil = true;
+  }
+
+  toggleEnglish() {
+    this.isTamil = false;
+  }
 
   togglesettings() {
     this.isSettingsContainer = !this.isSettingsContainer;
@@ -62,7 +71,7 @@ export class AppComponent implements OnInit {
   }
 
   title = 'ppvd_01';
-  constructor(private renderer: Renderer2, private el: ElementRef) {}
+  constructor(private renderer: Renderer2, private el: ElementRef) { }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event) {
@@ -70,7 +79,7 @@ export class AppComponent implements OnInit {
     const backgroundElement = this.el.nativeElement.querySelector('#date_page_background');
 
     // Adjust the background-position based on the scroll position
-    const yPos = `-${scrollPosition *0.5}px`; // Adjust the factor as needed
+    const yPos = `-${scrollPosition * 0.5}px`; // Adjust the factor as needed
     this.renderer.setStyle(backgroundElement, 'background-position', `center ${yPos}`);
   }
 
