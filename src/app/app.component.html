@@ -6,9 +6,13 @@
   <div class="settingContent">
     <h1>Settings</h1>
     <div class="languageContainer">
-      <div class="tamil" [ngStyle]="isTamil ? {'background-color': 'black', 'color': 'white'} : {'background-color': 'white', 'color': 'black'}" (click)="toggleTamil()">தமிழ்</div>
+      <div class="tamil"
+        [ngStyle]="isTamil ? {'background-color': 'black', 'color': 'white'} : {'background-color': 'white', 'color': 'black'}"
+        (click)="toggleTamil()">தமிழ்</div>
 
-      <div class="english" [ngStyle]="!isTamil ? {'background-color': 'black', 'color': 'white'} : {'background-color': 'white', 'color': 'black'}" (click)="toggleEnglish()">English</div>
+      <div class="english"
+        [ngStyle]="!isTamil ? {'background-color': 'black', 'color': 'white'} : {'background-color': 'white', 'color': 'black'}"
+        (click)="toggleEnglish()">English</div>
     </div>
   </div>
 </div>
@@ -17,7 +21,7 @@
   <div class="dateTextContainer">
     <p style="font-size: 5.5vh;">Save</p>
     <p style="font-size: 4.7vh;">The Date</p>
-    <p style="font-size: 4vh;">-25-01-24-</p>
+    <p style="font-size: 4vh;">-21-01-24-</p>
   </div>
   <div class="CountDownContainer">
     <div class="timeContainers">
@@ -38,18 +42,41 @@
     </div>
   </div>
 </div>
-<div id="detail_page">
-  <h2>Thiru Jeyakumar</h2>
-  <h2>and Nirmaladevi's</h2>
-  <h1 style="margin-top: 4vh;">House Warming</h1>
+<div id="detail_page" *ngIf="!isTamil">
+  <h2 style="font-family: Gotham; font-size: 2vh; font-weight: bold;">JOIN FOR</h2>
+  <h1 style="margin-top: 3vh;">Jk Chandhiran's</h1>
+  <h1>House Warming</h1>
   <h1>Ceremony</h1>
-  <span style="margin-top: 10vh; font-family: 'Rochester', cursive !important;"> at 07:00 am</span>
-  <p style="margin-top: 2.5vh;">Venue</p>
+  <img src="" alt="">
+  <span style="margin-top: 5vh; font-family: 'Rochester', cursive !important;"> at 07:00 am - 10:00 am</span>
+  <p style="margin-top: 2.5vh; color: #f28125;">Venue.</p>
   <span style="font-family: 'Rochester', cursive !important;">Sungurampatti, ( air port road ) Thirumangalam,
     Madurai-625706</span>
   <div class="locationButton" (click)="navigateToLocation()">
     Location &nbsp; <i class="bi bi-geo-alt-fill"></i>
   </div>
+  <p style="margin-top: 2.5vh; color: #f28125;">Regards.</p>
+  <h2 style="font-weight: 600; margin-top: 2vh;">Thiru Jeyakumar</h2>
+  <h2 style="font-weight: 600;">and Nirmaladevi</h2>
+  <img src="/assets/images/heart.png" style="margin-top: 2vh; width: 7vh; height: 7vh;" alt="">
+</div>
+
+<div id="detail_page" *ngIf="isTamil">
+  <h1 style="margin-top: 3vh; font-family: Gotham;">JK சந்திரன்</h1>
+  <h2 style=" margin-block:1.5vh; font-family: Gotham; font-size: 2vh; font-weight: bold;">இல்ல</h2>
+  <h1>புதுமனை புகு</h1>
+  <h1>விழா</h1>
+  <img src="" alt="">
+  <span style="margin-top: 5vh; font-family: Gotham !important;"> காலை &nbsp; 07:00 - 10:00</span>
+  <p style="margin-top: 2.5vh; color: #f28125;">இடம்</p>
+  <span style="font-family: 'Rochester', cursive !important;">திருமங்கலம் (விமான நிலயம் ரோடு ), மதுரை</span>
+  <div class="locationButton" (click)="navigateToLocation()">
+    Location &nbsp; <i class="bi bi-geo-alt-fill"></i>
+  </div>
+  <p style="margin-top: 2.5vh; color: #f28125;">தங்கள் அன்புள்ள</p>
+  <h2 style="font-weight: 600; margin-top: 2vh;">திரு ஜெயக்குமார் </h2>
+  <h2 style="font-weight: 600;">நிர்மலாதேவி</h2>
+  <img src="/assets/images/heart.png" style="margin-top: 2vh; width: 7vh; height: 7vh;" alt="">
 </div>
 <div class="footer">
   <h4>Vasanth E-Invitations</h4>

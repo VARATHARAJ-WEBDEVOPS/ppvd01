@@ -8,15 +8,19 @@ import * as moment from 'moment';
 })
 export class AppComponent implements OnInit {
   countdown: any;
-  isSettingsContainer: boolean = true;
+  isSettingsContainer: boolean = false;
   isTamil: boolean = false;
 
   toggleTamil() {
     this.isTamil = true;
+    this.isSettingsContainer = false;
+    localStorage.setItem('language', 'tamil');
   }
 
   toggleEnglish() {
     this.isTamil = false;
+    this.isSettingsContainer = false;
+    localStorage.setItem('language', 'english');
   }
 
   togglesettings() {
@@ -54,7 +58,13 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const targetDate = moment('2024-01-25');
+    const language = localStorage.getItem('language');
+    if (language === 'tamil') {
+      this.toggleTamil();
+    } else  if (language === 'english' || language === "") {
+      this.toggleEnglish();
+    }
+    const targetDate = moment('2024-01-21');
 
     setInterval(() => {
 
