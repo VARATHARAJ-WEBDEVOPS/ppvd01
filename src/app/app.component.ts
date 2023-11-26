@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   countdown: any;
   isSettingsContainer: boolean = false;
   isTamil: boolean = false;
+  
 
   toggleTamil() {
     this.isTamil = true;
@@ -58,6 +59,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+ 
+  
     const language = localStorage.getItem('language');
     if (language === 'tamil') {
       this.toggleTamil();
@@ -81,7 +84,9 @@ export class AppComponent implements OnInit {
   }
 
   title = 'ppvd_01';
-  constructor(private renderer: Renderer2, private el: ElementRef) { }
+  constructor(private renderer: Renderer2, private el: ElementRef) { 
+
+  }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event) {

@@ -130,15 +130,15 @@
 }
 
 .locationButton {
-    width: 50%;
-    height: 5vh;
+    width: 25vh;
+    height: 7vh;
     border-radius: 1vh;
-    margin-top: 1vh;
+    margin-top: 10vh;
     margin-bottom: 3vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2vh;
+    font-size: 2.3vh;
     color: white;
     background-color: #000;
     box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.2), 0 1vh 2vh rgba(0, 0, 0, 0.14), 0 1.5vh 3vh rgba(0, 0, 0, 0.12);
